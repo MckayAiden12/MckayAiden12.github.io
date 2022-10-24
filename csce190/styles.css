@@ -1,0 +1,35 @@
+body {
+    background:rgb(89, 138, 10);
+    font-family:Arial, Helvetica, sans-serif
+}
+
+.assignment {
+    display: grid;
+    padding: 50px;
+    background-color: rgb(56, 185, 80);
+}
+
+.assignment img {
+    width:800px
+}
+
+h1 {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    text-decoration-color: rgb(255, 0, 195);
+}
+h3 {
+    color: brown;
+    font-size: large;
+    display: grid;
+    text-align: center;
+}
+h4 {
+    text-decoration: blue;
+    text-align: center;
+}
+h2 {
+    text-align: center;
+    color: rgb(30, 0, 255);
+}
