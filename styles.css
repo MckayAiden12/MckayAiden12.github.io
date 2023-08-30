@@ -1,0 +1,28 @@
+/*Structure*/
+body {
+    background: linear-gradient(
+        to right,
+        hwb(190 76% 4%) 0%,
+        hwb(190 76% 4%) 70%,
+        hwb(199 34% 0%) 70%,
+        hwb(199 34% 0%) 100%
+    );
+
+    font-family: sans-serif, serif, Arial, Helvetica;
+}
+
+
+/*Navigation*/
+a {
+    color: #058f51;
+    text-decoration: none;
+    }
+
+
+/*Text*/
+h1 {
+    color: rgb(15, 43, 184);
+}
+h2 {
+    color: #000000;
+}
