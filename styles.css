@@ -4,6 +4,7 @@ body {
     background-size:     cover;    
     background-repeat:   no-repeat;
     background-position: center center;
+    color: rgb(0, 15, 52);
     font-family: sans-serif, serif, Arial, Helvetica;
 }
 
@@ -29,12 +30,15 @@ img {
     margin-left: 0%;
     margin-right: 0%;
     padding: blue;
+    border-left: #0d858e;
+    border-width: 100cap;
+    border-top: #059ce2;
 }
 
 /*Navigation*/
 
 a {
-    color: #059ce2;
+    color: #a0cbeb;
     text-decoration: none;
     padding-bottom: 0%;
     }
