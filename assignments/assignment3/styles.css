@@ -1,0 +1,95 @@
+/* Reset some default styles */
+body, h1, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply basic styling to the layout elements */
+body {
+    font-family: sans-serif, Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+header {
+    background-color: #fff;
+    color: #000000;
+    padding: 10px 0;
+}
+
+.nav-bar {
+    display: flex;
+    flex-wrap: wrap; /* Allow nav items to wrap to the next line if necessary */
+    justify-content: center; /* Center the navigation bar horizontally */
+    padding: 0px;
+}
+
+.nav-item {
+    font-size: 20px;
+    background-color: #626262;
+    padding: 20px 0;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 5px 50px;
+}
+
+main {
+    display: flex;
+    flex-direction: row; /* Side by side layout for main content and sidebar */
+    flex-wrap: wrap; /* Allow main and sidebar to wrap on smaller screens */
+    justify-content: center;
+    padding: 20px;
+}
+
+.content {
+    flex: 1; /* Equal width for main content and sidebar on larger screens */
+    background-color: #eee;
+    padding: 20px;
+    min-width: 700px;
+    max-width: 700px;
+    margin: 10px; /* Add margin to separate main content from nav items */
+}
+
+.sidebar {
+    flex: 1; /* Equal width for main content and sidebar on larger screens */
+    background-color: #ccc;
+    padding: 20px;
+    min-width: 200px;
+    max-width: 240px;
+    margin: 10px; /* Add margin to separate sidebar from main content */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .nav-bar {
+        flex-direction: column; /* Stack navigation items vertically */
+    }
+
+    .nav-item {
+        padding: 20px 0;
+    }
+
+    .nested-columns {
+        flex-direction: column;
+    }
+
+    .column1,
+    .column2 {
+        background-color: #ccc;
+        padding: 20px;
+        margin: 10px 0; /* Add margin to separate columns from nav items */
+        text-align: center;
+    }
+}
