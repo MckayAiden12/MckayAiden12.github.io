@@ -30,12 +30,13 @@ header {
     font-size: 20px;
     background-color: #626262;
     padding: 20px 0;
+    text-align:center;
 }
 
 .nav-item a {
     text-decoration: none;
     color: #ffffff;
-    padding: 5px 50px;
+    padding: 5px 41px;
 }
 
 main {
@@ -43,24 +44,25 @@ main {
     flex-direction: row; /* Side by side layout for main content and sidebar */
     flex-wrap: wrap; /* Allow main and sidebar to wrap on smaller screens */
     justify-content: center;
-    padding: 20px;
+    padding: 5px;
+    font-size: 18px;
 }
 
 .content {
     flex: 1; /* Equal width for main content and sidebar on larger screens */
     background-color: #eee;
     padding: 20px;
-    min-width: 700px;
-    max-width: 700px;
-    margin: 10px; /* Add margin to separate main content from nav items */
+    min-width: 200px;
+    max-width: 605px;
+    margin: 5px; /* Add margin to separate main content from nav items */
 }
 
 .sidebar {
     flex: 1; /* Equal width for main content and sidebar on larger screens */
     background-color: #ccc;
     padding: 20px;
-    min-width: 200px;
-    max-width: 240px;
+    min-width: 150px;
+    max-width: 195px;
     margin: 10px; /* Add margin to separate sidebar from main content */
 }
 
@@ -69,6 +71,12 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px;
+}
+
+.images1 {
+    display: flex;
+    justify-content: center;
+    min-width: 900px;
 }
 
 /* Media query for smaller screens */
@@ -81,15 +89,30 @@ footer {
         padding: 20px 0;
     }
 
-    .nested-columns {
-        flex-direction: column;
-    }
+    /* Add styling for the nested columns */
+/* Add styling for the nested columns */
+.nested-columns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
 
-    .column1,
-    .column2 {
-        background-color: #ccc;
-        padding: 20px;
-        margin: 10px 0; /* Add margin to separate columns from nav items */
-        text-align: center;
-    }
+.column1,
+.column2 {
+    flex: 1;
+    background-color: #ccc;
+    padding: 20px;
+    text-align: center;
+    margin: 0 5px; /* Add some margin between nested columns */
+}
+
+
+/* Style for the nested boxes inside the columns (applies to all screen sizes) */
+.nested-box {
+    background-color: #fff; /* Add a white background */
+    border: 1px solid #000; /* Add a black border */
+    padding: 10px; /* Add some padding to the nested boxes */
+    margin: 10px 0; /* Add margin to separate nested boxes */
+    text-align: center;
+}
 }
