@@ -1,30 +1,35 @@
 <!DOCTYPE html>
+<html>
 <head>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body style="background-image: url('assignments/assignment2/background.jpg');">
-    <div id="content">    
-        <p> 
-            <h1> CSCE 242 Web Applications</h1>
-            <h2> Aiden Mckay</h2>
-            <br>
-            CSCE is a class teaching students how to design an effective website from the front end, using sample websites as a practice method. The    
-            second goal of the class focuses on the javascript aspect of web design, which brings said website more applications and functions. The last 
-            part of the class focuses on integrating the learned javascript into recieving and storing data.       
-        </p>
-
-    <h2>Assignments</h2>
-    <ul>
-        <li>
-            <a href ="assignments\assignment1\assignment1.html">Assignment 1</a>
-        </li>
-        <li>
-            <a href ="assignments\assignment2\assignment2.html">Assignment 2</a>
-        </li>
-        <li>
-            <a href ="assignments\assignment3\assignment3.html">Assignment 2</a>
-        </li>
-    </ul>
-    </div>
+    <header>
+        <h3>Aiden Mckay</h3>
+        <h1>CSCE 242 Web Applications</h1>
+    </header>
+    <main>
+        <section id="content">
+            <h2>Assignments</h2>
+            <ul class="assignment-list">
+                <li class="assignment-box">
+                    <a href="assignments/assignment1/assignment1.html">Assignment 1 - Basic HTML</a>
+                    <img src="images/assignment1ss.jpg">
+                    <p class="assignment-description">The goal of Assignment 1 was to setup a basic homepage with links to every assignment, along with a directory</p>
+                </li>
+                <li class="assignment-box">
+                    <a href="assignments/assignment2/assignment2.html">Assignment 2 - Basic CSS</a>
+                    <img src="images/assignment2ss.jpg">
+                    <p class="assignment-description">The goal of Assignment 2 was to introduce basic CSS style editing and additions in preparation for future projects.</p>
+                </li>
+                <li class="assignment-box">
+                    <a href="assignments/assignment3/assignment3.html">Assignment 3 - Page Layout</a>
+                    <img src="images/assignment3ss.jpg">
+                    <p class="assignment-description">The goal of Assignment 3 was to create a single webpage which lays out content using css flexbox.</p>
+                </li>
+                <!-- Add more assignment boxes as needed -->
+            </ul>
+        </section>
+    </main>
 </body>
 </html>

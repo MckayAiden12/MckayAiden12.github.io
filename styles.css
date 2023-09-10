@@ -1,56 +1,83 @@
 /*Structure*/
 
 body {
-    background-size:     cover;    
-    background-repeat:   no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-position: center center;
     color: rgb(0, 15, 52);
     font-family: sans-serif, serif, Arial, Helvetica;
+    margin: 0;
 }
 
 a:hover {
-color: rgb(125, 228, 77);
-}
-
-ol {
-    font-size: 110%;
-    color: hwb(232 15% 4%) 100%
+    color: rgb(125, 228, 77);
 }
 
 #content {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
     width: 80%;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-img {
-    padding-top: 3%;
-    padding-bottom: 3%;
-    margin-left: 0%;
-    margin-right: 0%;
-    padding: blue;
-    border-left: #0d858e;
-    border-width: 100cap;
-    border-top: #059ce2;
-}
-
-/*Navigation*/
+/* Navigation */
 
 a {
     color: #0058d2;
     text-decoration: none;
-    padding-bottom: 0%;
-    }
+}
 
-/*Text*/
+/* Text */
+
 h1 {
     font-size: 250%;
     color: rgb(16, 10, 190);
+    text-align: center;
 }
+
 h2 {
-    color: #000000;
+    color: rgb(16, 10, 190);
+    text-align: center;
 }
-table {
-    background-color: rgb(15, 92, 151);
+
+h3 {
+    color: rgb(18, 18, 35);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.assignment-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.assignment-box {
+    flex: 1;
+    background-color: #f0f0f0;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 350px;
+}
+
+.assignment-description {
+    margin-top: 10px;
+    color: #666;
+}
+
+@media screen and (max-width: 768px) {
+    .assignment-list {
+        flex-direction: column; /* Stack assignments on top of each other for small screens */
+    }
+
+    .assignment-box {
+        flex: 1; /* Make boxes occupy full width when stacked */
+        margin: 10px 0; /* Add some vertical spacing */
+    }
 }

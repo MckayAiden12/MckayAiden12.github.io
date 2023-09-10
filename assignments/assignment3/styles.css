@@ -93,8 +93,9 @@ footer {
 /* Add styling for the nested columns */
 .nested-columns {
     display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+    flex-direction: row; /* Side by side layout for main content and sidebar */
+    flex-wrap: wrap; /* Allow main and sidebar to wrap on smaller screens */
+    justify-content: center;
 }
 
 .column1,
@@ -109,10 +110,10 @@ footer {
 
 /* Style for the nested boxes inside the columns (applies to all screen sizes) */
 .nested-box {
+    flex: 1;
     background-color: #fff; /* Add a white background */
     border: 1px solid #000; /* Add a black border */
     padding: 10px; /* Add some padding to the nested boxes */
     margin: 10px 0; /* Add margin to separate nested boxes */
-    text-align: center;
 }
 }
