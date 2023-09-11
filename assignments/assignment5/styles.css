@@ -7,16 +7,24 @@ body {
 .container {
     display: flex;
     justify-content: center;
-    padding: 20px;
+    padding: 1px;
     font-size: 13px;
 }
 
 /* Style for the black navigation bar */
 .navbar {
+    position: fixed;
+    display: flex;
     background-color: black;
     color: white;
-    padding: 10px 0;
-    text-align: center;
+}
+
+.homeimage {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.title {
+    margin-left: 20px
 }
 
 body {
