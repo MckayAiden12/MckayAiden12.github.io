@@ -7,6 +7,8 @@ body {
 
 /*navbar */
 .navbar {
+    position: fixed;
+    min-width: 100%;
     background-color: black;
     color: white;
     padding: 5px 20px; /* Adjust padding as needed */
@@ -122,20 +124,43 @@ img {
 }
 
 .itsegment {
-    display: flex; /* Use flexbox to create a horizontal layout */
-    justify-content: space-between; /* Add space between image and text */
+    display: flex;
     background-color: #73000a;
     color: rgb(207, 207, 207);
+    line-height: 30px;
+    margin-top: 30px;
 }
 .sbs-image {
-    flex: 1; /* Let the image container grow to fill available space */
-    margin-right: 20px; /* Add space between image and text (adjust as needed) */
-    min-width: 70%;
+    margin-right: 20px;
+    min-width: 55%;
 
 }
 
 .sbs-text {
-    text-align: center;
-    line-height: 1.4;
     font-size: larger;
+    text-align: right;
+}
+
+
+.barriers {
+    display: flex;
+    background-color: #000000;
+    color: rgb(207, 207, 207);
+    line-height: 30px;
+}
+
+.sbs-text2 {
+    text-align: center;
+    font-size: larger;
+}
+
+.linka {
+    background-color: #73000a;
+    color: white;
+}
+
+.sbs-image2 {
+    flex: 1;
+    margin-right: 20px;
+    min-width: 50%;
 }
