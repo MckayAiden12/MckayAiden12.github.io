@@ -1,7 +1,8 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
+    padding: 4px;
+    background-image: ;
 }
 
 /*navbar */
@@ -36,6 +37,7 @@ img {
     height: 100%;
     object-fit: cover; /* Maintain aspect ratio and cover the entire viewport */
 }
+
 .content {
     justify-content: left;
 }
@@ -43,6 +45,47 @@ img {
 .search-box {
     display: flex;
 }
+
+.research {
+    position: relative;
+    margin-left: 10%;
+    max-width: 680px;
+    color: rgb(247, 247, 247);
+    font-size: 20px;
+    min-width: fit-content;
+}
+
+.research-bold {
+    width: 725px; /* Set the width of the text */
+    margin: 0 auto; /* Center-align the text horizontally within the container */
+    padding: 0px; /* Add padding for spacing */
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+.research-normal {
+    width: 725px; /* Set the width of the text */
+    margin: 0 auto; /* Center-align the text horizontally within the container */
+    padding: 20px; /* Add padding for spacing */
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.background-image {
+    background-image: url('your-image.jpg'); /* Replace 'your-image.jpg' with the path to your image */
+    background-size: cover; /* Cover the entire container with the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center top; /* Center the image horizontally and align it to the top */
+    /* Add any other background properties as needed */
+    width: 100%; /* Make the container cover the entire viewport width */
+    height: 300px; /* Set the short height (adjust as needed) */
+}
+
+.box-red {
+    background-color: #73000a;
+    text-align: center;
+}
+
 
 .container {
     display: flex;
@@ -76,4 +119,23 @@ img {
 
 .link-list li {
     margin: 5px 0;
+}
+
+.itsegment {
+    display: flex; /* Use flexbox to create a horizontal layout */
+    justify-content: space-between; /* Add space between image and text */
+    background-color: #73000a;
+    color: rgb(207, 207, 207);
+}
+.sbs-image {
+    flex: 1; /* Let the image container grow to fill available space */
+    margin-right: 20px; /* Add space between image and text (adjust as needed) */
+    min-width: 70%;
+
+}
+
+.sbs-text {
+    text-align: center;
+    line-height: 1.4;
+    font-size: larger;
 }
