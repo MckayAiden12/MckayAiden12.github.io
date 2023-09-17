@@ -4,33 +4,44 @@ body {
     padding: 0;
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-    padding: 1px;
-    font-size: 13px;
-}
-
-/* Style for the black navigation bar */
+/*navbar */
 .navbar {
-    position: fixed;
-    display: flex;
     background-color: black;
     color: white;
+    padding: 5px 20px; /* Adjust padding as needed */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10px; /* Adjust font size as needed */
 }
 
-.homeimage {
-    margin-left: 20px;
-    margin-top: 20px;
-}
-.title {
-    margin-left: 20px
+.navbar-links {
+    display: flex;
+    align-items: center;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+.gateways {
+    text-align: right;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: white;
+    margin-right: 10px; /* Add spacing between links */
+}
+
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio and cover the entire viewport */
+}
+.content {
+    justify-content: left;
+}
+
+.search-box {
+    display: flex;
 }
 
 .container {
