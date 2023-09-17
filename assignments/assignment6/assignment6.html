@@ -4,24 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Show/Hide Image</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="HideandSeek">
-        <button onclick="showImage()">Show</button>
-        <button onclick="hideImage()">Hide</button>
-        <img id="image" src="images/cute_animal.jpg" alt="Image">
-    
-        <script>
-            function showImage() {
-                var image = document.getElementById('image');
-                image.style.display = 'block';
-            }
-    
-            function hideImage() {
-                var image = document.getElementById('image');
-                image.style.display = 'none';
-            }
-        </script>
+    <div class="default_border">
+        <div class="hideandseek"> <f1>Hide and Seek</f1>
+            <button onclick="showImage()">Show</button>
+            <button onclick="hideImage()">Hide</button>
+            <img id="image" src="images/cute_animal.jpg" alt="Image">
+        
+            <script>
+                function showImage() {
+                    var image = document.getElementById('image');
+                    image.style.display = 'block';
+                }
+        
+                function hideImage() {
+                    var image = document.getElementById('image');
+                    image.style.display = 'none';
+                }
+            </script>
+        </div>
+        <div class="animate">
+            <button onclick="animateShape()">Animate</button>
+            <div id="shape" class="square"></div>
+
+            <script>
+                function animateShape() {
+                    var shape = document.getElementById('shape');
+
+                    // Animate right, down, left, and up
+                    shape.style.transform = 'translateX(450px)';
+                    setTimeout(function() {
+                        shape.style.transform = 'translateX(450px) translateY(300px)';
+                    }, 500);
+                    setTimeout(function() {
+                        shape.style.transform = 'translateX(0) translateY(300px)';
+                    }, 1000);
+                    setTimeout(function() {
+                        shape.style.transform = 'translateX(0) translateY(0)';
+                    }, 1500);
+                }
+            </script>
+        </div>
+        <div class="comment_box">
+            <form id="comment-form">
+                <label for="product-name">Product Name:</label>
+                <input type="text" id="product-name" required><br><br>
+        
+                <label for="comment-text">Comment:</label>
+                <textarea id="comment-text" required></textarea><br><br>
+        
+                <label for="rating">Rating:</label>
+                <input type="number" id="rating" min="1" max="5" required><br><br>
+        
+                <label for="user-name">User Name:</label>
+                <input type="text" id="user-name" required><br><br>
+        
+                <button type="button" onclick="addComment()">Add Comment</button>
+            </form>
+        
+            <div id="comment-container"></div>
+        
+            <script>
+                function addComment() {
+                    var productName = document.getElementById('product-name').value;
+                    var commentText = document.getElementById('comment-text').value;
+                    var rating = document.getElementById('rating').value;
+                    var userName = document.getElementById('user-name').value;
+        
+                    if (productName.trim() !== '' && commentText.trim() !== '' && userName.trim() !== '') {
+                        var commentContainer = document.getElementById('comment-container');
+                        var commentDiv = document.createElement('div');
+                        commentDiv.classList.add('comment');
+                        commentDiv.innerHTML = `
+                            <strong>Product Name:</strong> ${productName}<br>
+                            <strong>Comment:</strong> ${commentText}<br>
+                            <strong>Rating:</strong> ${rating}<br>
+                            <strong>User Name:</strong> ${userName}
+                        `;
+                        commentContainer.appendChild(commentDiv);
+        
+                        // Clear the form
+                        document.getElementById('comment-form').reset();
+                    }
+                }
+            </script>
+        </div>
     </div>
 </body>
 </html>
