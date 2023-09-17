@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="intro-bar">Intro to JavaScript</div>
     <div class="default_border">
-        <div class="hideandseek"> <f1>Hide and Seek</f1>
+        <div class="hideandseek">
+            <div class="hide-seek"><strong>Hide and Seek</strong></div>
             <button onclick="showImage()">Show</button>
             <button onclick="hideImage()">Hide</button>
             <img id="image" src="images/cute_animal.jpg" alt="Image">
@@ -17,18 +19,26 @@
                 function showImage() {
                     var image = document.getElementById('image');
                     image.style.display = 'block';
+
+                    // Add the image-shown class to adjust the box size
+                    var hideAndSeek = document.querySelector('.hideandseek');
+                    hideAndSeek.classList.add('image-shown');
                 }
         
                 function hideImage() {
                     var image = document.getElementById('image');
                     image.style.display = 'none';
+
+                    // Remove the image-shown class to revert the box size
+                    var hideAndSeek = document.querySelector('.hideandseek');
+                    hideAndSeek.classList.remove('image-shown');
                 }
             </script>
         </div>
         <div class="animate">
-            <button onclick="animateShape()">Animate</button>
+            <div class="animate-text"><strong>Animate</strong></div>
+            <button onclick="animateShape()">Dance</button>
             <div id="shape" class="square"></div>
-
             <script>
                 function animateShape() {
                     var shape = document.getElementById('shape');
@@ -49,6 +59,7 @@
         </div>
         <div class="comment_box">
             <form id="comment-form">
+                <div class="input-title"><strong>Input</strong></div>
                 <label for="product-name">Product Name:</label>
                 <input type="text" id="product-name" required><br><br>
         
@@ -72,25 +83,25 @@
                     var commentText = document.getElementById('comment-text').value;
                     var rating = document.getElementById('rating').value;
                     var userName = document.getElementById('user-name').value;
-        
+            
                     if (productName.trim() !== '' && commentText.trim() !== '' && userName.trim() !== '') {
                         var commentContainer = document.getElementById('comment-container');
                         var commentDiv = document.createElement('div');
                         commentDiv.classList.add('comment');
-                        commentDiv.innerHTML = `
-                            <strong>Product Name:</strong> ${productName}<br>
-                            <strong>Comment:</strong> ${commentText}<br>
-                            <strong>Rating:</strong> ${rating}<br>
-                            <strong>User Name:</strong> ${userName}
-                        `;
+                        var commentInfo = `<strong><h2>${productName}</h2></strong>${rating}/5 stars${commentText}<br><br>by${userName}`;
+                        commentDiv.innerHTML = commentInfo;
                         commentContainer.appendChild(commentDiv);
-        
+            
                         // Clear the form
                         document.getElementById('comment-form').reset();
+            
+                        // Resize the comment box and blue box
+                        resizeCommentBox();
                     }
                 }
             </script>
         </div>
     </div>
+    <div class="goodbye-bar">Goodbye</div>
 </body>
 </html>

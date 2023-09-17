@@ -1,6 +1,9 @@
 
 #image {
     display: none; /* Initially hide the image */
+    max-width: 75%; /* Make the image fit within the blue border */
+    max-height: 75%; /* Make the image fit within the blue border */
+    align-content: center;
 }
 
 #shape {
@@ -11,10 +14,13 @@
     transition: transform 1s ease-in-out;
 }
 
+body {
+    font-family: Arial, sans-serif;
+}
 .smiley {
     width: 50px;
     height: 50px;
-    background-image: url('smiley.png'); /* Use the path to your smiley image */
+    background-image: url('smiley.png');
     background-size: cover;
     transition: transform 1s ease-in-out;
 }
@@ -24,44 +30,110 @@ h1 {
     text-size-adjust: 40px;
 }
 
+h2 {
+    color: #6495ED;
+}
+
 .default_border {
     display: flex;
-    padding-block: 10px;
-    display: flex;
-    flex-direction: row; /* Side by side layout for main content and sidebar */
-    flex-wrap: wrap; /* Allow main and sidebar to wrap on smaller screens */
+    flex-wrap: wrap;
     justify-content: center;
-
 }
 
 .hideandseek {
     flex: 1;
-    background-color: #fff; /* Add a white background */
-    border: 15px solid #5951f3; /* Add a black border */
-    min-width: 500px;
-    min-height: 400px;
-    max-width: 500px;
+    background-color: #e3f3f8;
+    border: 15px solid #6495ED;
+    min-width: 400px;
+    min-height: 350px;
+    max-width: 400px;
+    max-height: 350px;
+}
+
+.hide-seek {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+    padding: 15px;
+}
+
+.comment_box {
+    background-color: #e3f3f8;
+    border: 15px solid #6495ED;
+    min-width: 400px;
+    min-height: 350px;
+    max-width: 400px;
+
 }
 
 .comment {
     border: 1px solid #ccc;
-    padding: 10px;
     margin: 10px;
-    background-color: #f9f9f9;
+    background-color: #FFEBCD;
+    min-width: 350px;
+    padding: 5px;
 }
 
-.comment_box {
-    min-width: 500px;
-    min-height: 400px;
-    max-width: 500px;
-    background-color: #fff; /* Add a white background */
-    border: 15px solid #5951f3; /* Add a black border */
+.input-title {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+    padding: 15px;
+}
+
+.input-field {
+    width: 100%;
+    max-width: 300px;
+    font-size: 16px;
+    padding: 10px;
 }
 
 .animate {
-    min-width: 500px;
-    min-height: 400px;
-    max-width: 500px;
-    background-color: #fff; /* Add a white background */
-    border: 15px solid #5951f3; /* Add a black border */
+    background-color: #e3f3f8;
+    border: 15px solid #6495ED;
+    min-width: 400px;
+    min-height: 350px;
+    max-width: 400px;
+    max-height: 350px;
+}
+
+.animate-text {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+    padding: 15px;
+}
+
+.intro-bar, .goodbye-bar {
+    background-color: #FFEBCD;
+    color: #000000;
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+@media (min-width: 769px) {
+
+    .animate button {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hideandseek,
+    .comment_box,
+    .default_border {
+    display: flex;
+    flex-direction: column;
+      align-items: center; /* Center the content horizontally */
+      padding: 20px; /* Add some padding for spacing */
+    min-height: fit-content;
+    }
+
+    .animate{
+        align-items: center; /* Center the content horizontally */
+        text-align: center; /* Center the text inside elements */
+        padding: 20px; /* Add some padding for spacing */
+    }
 }
