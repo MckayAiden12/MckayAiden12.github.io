@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show/Hide Image</title>
+</head>
+<body>
+    <div class="HideandSeek">
+        <button onclick="showImage()">Show</button>
+        <button onclick="hideImage()">Hide</button>
+        <img id="image" src="images/cute_animal.jpg" alt="Image">
+    
+        <script>
+            function showImage() {
+                var image = document.getElementById('image');
+                image.style.display = 'block';
+            }
+    
+            function hideImage() {
+                var image = document.getElementById('image');
+                image.style.display = 'none';
+            }
+        </script>
+    </div>
+</body>
+</html>
