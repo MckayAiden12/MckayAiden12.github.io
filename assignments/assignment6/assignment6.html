@@ -60,17 +60,27 @@
         <div class="comment_box">
             <form id="comment-form">
                 <div class="input-title"><strong>Input</strong></div>
-                <label for="product-name">Product Name:</label>
-                <input type="text" id="product-name" required><br><br>
         
-                <label for="comment-text">Comment:</label>
-                <textarea id="comment-text" required></textarea><br><br>
+                <!-- Wrap each label and input in a div for consistent styling -->
+                <div class="input-group">
+                    <label for="product-name">Product Name:</label>
+                    <input type="text" id="product-name" required>
+                </div>
         
-                <label for="rating">Rating:</label>
-                <input type="number" id="rating" min="1" max="5" required><br><br>
+                <div class="input-group">
+                    <label for="comment-text">Comment:</label>
+                    <textarea id="comment-text" required></textarea>
+                </div>
         
-                <label for="user-name">User Name:</label>
-                <input type="text" id="user-name" required><br><br>
+                <div class="input-group">
+                    <label for="rating">Rating:</label>
+                    <input type="number" id="rating" min="1" max="5" required>
+                </div>
+        
+                <div class="input-group">
+                    <label for="user-name">User Name:</label>
+                    <input type="text" id="user-name" required>
+                </div>
         
                 <button type="button" onclick="addComment()">Add Comment</button>
             </form>
