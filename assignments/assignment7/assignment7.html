@@ -9,7 +9,8 @@
 </head>
 <body>
     <div id="header">
-        <span>If Statement Assignment</span>
+        <span id="menu-icon" onclick="toggleMenu()">☰</span>
+        <span id="page-title">If Statement Assignment</span>
     </div>
     
     <div id="menu" class="menu-tabs">
@@ -20,18 +21,36 @@
     <div id="content">
         <div id="exercise1-content">
             <h2>Who's the Oldest</h2>
-            <input type="text" id="name1" placeholder="Name 1">
-            <input type="number" id="age1" placeholder="Age 1">
-            <input type="text" id="name2" placeholder="Name 2">
-            <input type="number" id="age2" placeholder="Age 2">
-            <input type="text" id="name3" placeholder="Name 3">
-            <input type="number" id="age3" placeholder="Age 3">
-            <button onclick="determineOrder()">Determine Order</button>
+            <div class="input-row">
+                <label for="name1">Name 1:</label>
+                <input type="text" id="name1" placeholder="">
+            </div>
+            <div class="input-row">
+                <label for="age1">Age 1:</label>
+                <input type="number" id="age1" placeholder="">
+            </div>
+            <div class="input-row">
+                <label for="name2">Name 2:</label>
+                <input type="text" id="name2" placeholder="">
+            </div>
+            <div class="input-row">
+                <label for="age2">Age 2:</label>
+                <input type="number" id="age2" placeholder="">
+            </div>
+            <div class="input-row">
+                <label for="name3">Name 3:</label>
+                <input type="text" id="name3" placeholder="">
+            </div>
+            <div class="input-row">
+                <label for="age3">Age 3:</label>
+                <input type="number" id="age3" placeholder="">
+            </div>
+            <button onclick="determineOrder()">Compare Ages</button>
             <div id="order-result"></div>
         </div>
 
         <div id="exercise2-content">
-            <h2>Fund Raising</h2>
+            <h2>Exercise 2: Fund Raising</h2>
             <h3>Goal: 10,000.00</h3>
             <div class="fund-raised">
                 <label for="donation">Funds Raised:</label>

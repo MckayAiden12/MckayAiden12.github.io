@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #ffffff;
     text-align: center;
     margin: 0;
     padding: 0;
@@ -17,14 +17,14 @@ h3 {
 }
 
 #header {
-    background-color: salmon; /* Set the color for the "If Statement Assignment" bar */
-    color: #fff;
+    background-color: rgb(253, 165, 155); /* Set the color for the "If Statement Assignment" bar */
+    color: #000000;
     padding: 10px;
     text-align: center;
 }
 
 .menu-tabs {
-    background-color: #f0f0f0; /* Set the background color for the tabs */
+    background-color: #fcf1f1; /* Set the background color for the tabs */
     display: flex;
     justify-content: center;
 }
@@ -61,26 +61,54 @@ h3 {
 }
 
 input[type="text"], input[type="number"] {
-    width: 100%;
+    width: 100px;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+}
+
+.input-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.input-row label {
+    flex: 1;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.input-row input {
+    flex: 2;
+    width: 100px; /* Adjust the width as per your preference */
+    padding: 5px; /* Adjust the padding as per your preference */
+    border: 1px solid #ccc;
+    margin-right: 400px;
 }
 
 button {
     padding: 10px 20px;
     background-color: #333;
-    color: #fff;
+    color: #ffffff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-right: 500px;
+}
+
+#exercise1-content {
+    background-color: rgb(253, 165, 155);
+    border-radius: 10px;
+    padding: 20px; /* Increase the padding to add more space */
+    margin: 10px 0; /* Add margin to separate the pink boxes */
 }
 
 #exercise2-content {
     display: flex;
     background-color: rgb(253, 165, 155);
-    padding: 10px;
+    padding: 20px; /* Increase the padding to add more space */
+    margin: 10px 0; /* Add margin to separate the pink boxes */
 }
 
 #exercise2-content button {
@@ -118,4 +146,33 @@ button {
     background: linear-gradient(to bottom, white 0%, white 25%, white 25%, white 50%, white 50%, white 75%, white 75%, white 100%);
     margin: 0 auto; /* Add this to center the thermometer horizontally */
     padding: 10px;
+}
+
+/* Add this media query to hide content on small screens initially */
+@media (max-width: 768px) {
+    #exercise1-content,
+    #exercise2-content {
+        display: none;
+    }
+
+    #menu-icon {
+        display: block;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        cursor: pointer;
+    }
+
+    #page-title {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .menu-tabs {
+        flex-direction: column;
+    }
+
+    .menu-item {
+        width: 100%;
+    }
 }
