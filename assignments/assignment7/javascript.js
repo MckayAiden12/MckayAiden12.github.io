@@ -12,25 +12,25 @@ function showExercise(exerciseId) {
     }
 }
 
-let isMenuVisible = false; // Track the visibility state of the menu
+let isMenuVisible = false;
 
 function toggleMenu() {
     const exercise1Content = document.getElementById('exercise1-content');
     const exercise2Content = document.getElementById('exercise2-content');
 
     if (!isMenuVisible) {
-        exercise1Content.style.display = 'block'; // Show Exercise 1 content
-        exercise2Content.style.display = 'block'; // Show Exercise 2 content
-        isMenuVisible = true; // Set the menu visibility state to true
+        exercise1Content.style.display = 'block';
+        exercise2Content.style.display = 'block';
+        isMenuVisible = true;
     } else {
-        exercise1Content.style.display = 'none'; // Hide Exercise 1 content
-        exercise2Content.style.display = 'none'; // Hide Exercise 2 content
-        isMenuVisible = false; // Set the menu visibility state to false
+        exercise1Content.style.display = 'none';
+        exercise2Content.style.display = 'none';
+        isMenuVisible = false;
     }
 }
 
 window.addEventListener('load', function() {
-    // Hide Exercise 1 and Exercise 2 content on small screens by default
+
     if (window.innerWidth <= 768) {
         const exercise1Content = document.getElementById('exercise1-content');
         const exercise2Content = document.getElementById('exercise2-content');
@@ -57,10 +57,8 @@ function determineOrder() {
             { name: name3, age: age3 }
         ];
 
-        // Sort the people array by age in descending order
         people.sort((a, b) => b.age - a.age);
 
-        // Extract the names in the sorted order
         const sortedNames = people.map(person => person.name);
 
         document.getElementById('order-result').innerHTML = "Ordered names by age: " + sortedNames.join(', ');
@@ -69,7 +67,7 @@ function determineOrder() {
 
 function updateThermometer() {
     const donation = parseInt(document.getElementById('donation').value);
-    const goal = 10000; // Set your fundraising goal here
+    const goal = 10000;
 
     if (!isNaN(donation)) {
         const percentage = Math.min((donation / goal) * 100, 100); // Cap at 100%
@@ -78,9 +76,7 @@ function updateThermometer() {
     }
 }
 
-// Toggle the menu for small screens when clicking the hamburger icon
 document.getElementById('menu-icon').addEventListener('click', toggleMenu);
 window.addEventListener('load', function() {
-    // Show Exercise 1 by default
     showExercise('exercise1');
 });
