@@ -148,6 +148,9 @@ button {
     padding: 10px;
 }
 
+:root {
+    --thermometer-height: 0%; /* Initial height is 0% */
+}
 
 @media (max-width: 768px) {
     #exercise1-content,
