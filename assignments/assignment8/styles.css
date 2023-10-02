@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #f0f0f0;
+    background-color: #000000;
     margin: 0;
     padding: 0;
 }
@@ -25,6 +25,54 @@ button {
     cursor: pointer;
 }
 
+.pages {
+    display: flex;
+    background-color: rgb(69, 69, 206);
+    padding: 30px;
+}
+
+.running-man-box {
+    background-color: #5f65d8;
+    border-radius: 15px;
+    flex: 1;
+    max-width: 40%;
+    min-width: 40%;
+    max-height: 400px;
+}
+
+.thermometer-box {
+    background-color: #5f65d8;
+    border-radius: 15px;
+    flex: 1;
+    padding: 20px;
+    margin-left: 10px;
+}
+
+
+.funds-raising-box {
+    flex: 1;
+    max-width: 40%;
+    min-width: 40%;
+}
+
+.running-man-container {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+#runningMan {
+    width: 100px;
+    height: auto;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+}
+
+.funds-raised {
+    max-width: 1000px;
+    min-width: 1000px;
+}
+
 .thermometer {
     width: 100px;
     height: 400px;
@@ -36,7 +84,6 @@ button {
 
 .fill {
     width: 100%;
-    position: absolute;
     bottom: 0;
     background: linear-gradient(to top, red 0%, red 50%, red 50%, red 100%);
     transition: height 0.5s;
