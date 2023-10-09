@@ -14,12 +14,13 @@ header {
 
 nav ul {
     display: flex; /* Display list items horizontally */
-    justify-content: space-around; /* Distribute items evenly */
+    justify-content: space-between; /* Distribute items evenly */
     padding: 1vw 0; /* Use viewport units for padding top and bottom */
+    margin-left: 1vw;
 }
 
 nav li {
-    margin: 0 1.2vw; /* Use viewport units for margin */
+    margin: 0 3vw; /* Use viewport units for margin */
 }
 
 nav a {
@@ -27,6 +28,12 @@ nav a {
     color: #fff;
     font-weight: bold;
     font-size: 1.0vw; /* Use viewport units for font size */
+}
+
+/* Style the left-aligned "Home" button */
+nav .left {
+    margin-right: auto; /* Push it to the left */
+    margin-left: 25%
 }
 
 /* Style the main content area */
