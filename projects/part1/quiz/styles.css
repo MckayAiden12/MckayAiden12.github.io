@@ -1,3 +1,6 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
 /* Reset some default styles for the list */
 ul {
     list-style-type: none;
@@ -9,33 +12,154 @@ ul {
 header {
     background-color: #333; /* Dark background color */
     color: #fff; /* Text color */
+    padding: 1vw 0; /* Use viewport units for padding */
 }
 
 nav ul {
     display: flex; /* Display list items horizontally */
-    justify-content: space-around; /* Distribute items evenly */
-    padding: 20px 0; /* Add some padding top and bottom */
+    justify-content: space-between; /* Distribute items evenly */
+    padding: 1vw 0; /* Use viewport units for padding top and bottom */
+    margin-left: 1vw;
 }
 
 nav li {
-    margin: 0 15px; /* Add margin between list items */
+    margin: 0 3vw; /* Use viewport units for margin */
 }
 
 nav a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
+    font-size: 1.0vw; /* Use viewport units for font size */
+}
+
+/* Style the left-aligned "Home" button */
+nav .left {
+    margin-right: auto; /* Push it to the left */
+    margin-left: 25%
 }
 
 /* Style the main content area */
 main {
     padding: 20px;
+    display: flex; /* Enable flex layout */
+    flex-wrap: wrap; /* Allow boxes to wrap to the next line */
+    justify-content: space-between; /* Space between boxes */
+    align-items: flex-start; /* Align boxes at the top */
 }
 
-/* Style the footer */
-footer {
+.stack {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    margin-bottom: 20px;
+    height: 9.5vw;
+    border: 1px solid #ddd; /* Add border to each stack box */
+    box-sizing: border-box;
+}
+
+.stack-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.stack-text {
+    flex: 1;
+    padding: 10px;
+}
+
+.stack-text h2 {
+    font-size: 1.5vw;
+    margin-bottom: 1vw;
+}
+
+.stack-text p {
+    font-size: 1vw;
+    margin-bottom: 1vw;
+}
+
+.angled-sentence {
+    flex: 1;
+    transform: rotate(15deg);
+    transform-origin: top left;
+    padding: 9px;
+
+}
+
+.angled-sentence p {
+    font-size: 1vw;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.rectangular-box {
+    flex: 1; /* Grow to take available space */
+    min-width: 48%; /* Set the width of each rectangular box (adjust as needed) */
+    padding: 20px;
+    border: 1px solid #ddd; /* Add a border for separation */
+    box-sizing: border-box; /* Include padding and border in the box's total width */
+    background-color: #f9f9f9; /* Background color for the rectangular boxes */
+}
+
+/* Add more styles to your rectangular boxes as needed */
+
+.description {
+    flex: 1; /* Grow to take available space */
+    max-width: 80%; /* Adjust the max-width as needed */
+    margin: 0 auto; /* Center the description horizontally */
+    margin-left: 5%;
+    min-height: 600px;
+    font-size: 2vw; /* Use viewport units for font size */
+}
+
+.description h1 {
+    font-size: 4vw; /* Increase the font size for larger screens */
+}
+
+.description h3 {
+    font-size: 2.0vw; /* Increase the font size for larger screens */
+    margin-bottom: 3vw; /* Use viewport units for margin */
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center;
+}
+
+.button {
     background-color: #333;
     color: #fff;
+    padding: 1vw 3vw; /* Use viewport units for padding */
     text-align: center;
-    padding: 10px 0;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 0.5vw; /* Use viewport units for border radius */
+    font-size: 1.5vw; /* Use viewport units for font size */
+    margin: 2vw; /* Use viewport units for margin */
+}
+
+/* Style the image */
+.image {
+    flex: 1; /* Grow to take available space */
+    text-align: right; /* Align the image to the right */
+    margin-right: 5vw;
+    margin-left: 1.2vw; /* Use viewport units for margin */
+}
+
+.image img {
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stack {
+        width: 100%;
+    }
 }

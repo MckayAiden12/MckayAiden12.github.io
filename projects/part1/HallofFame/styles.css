@@ -1,3 +1,6 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
 /* Reset some default styles for the list */
 ul {
     list-style-type: none;
