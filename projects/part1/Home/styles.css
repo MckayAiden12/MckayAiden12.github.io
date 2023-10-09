@@ -30,12 +30,48 @@ nav a {
 /* Style the main content area */
 main {
     padding: 20px;
+    display: flex; /* Enable flex layout */
+
+    text-align: center;
 }
 
-/* Style the footer */
-footer {
+.description {
+    flex: 1; /* Grow to take available space */
+}
+
+.description p {
+    margin-bottom: 20px; /* Add margin below the paragraph */
+    padding: 10px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+
+    align-items: center;
+}
+
+.button {
+    margin-bottom: 10px; /* Add space between buttons */
     background-color: #333;
     color: #fff;
+    padding: 10px 20px;
     text-align: center;
-    padding: 10px 0;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    max-width: 10%;
+    min-width: 20%;
+    margin: 5%;
+}
+
+/* Style the image */
+.image {
+    flex: 1; /* Grow to take available space */
+    text-align: right; /* Align the image to the right */
+}
+
+.image img {
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+    height: auto; /* Maintain aspect ratio */
 }
