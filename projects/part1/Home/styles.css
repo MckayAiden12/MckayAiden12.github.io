@@ -9,66 +9,76 @@ ul {
 header {
     background-color: #333; /* Dark background color */
     color: #fff; /* Text color */
+    padding: 1vw 0; /* Use viewport units for padding */
 }
 
 nav ul {
     display: flex; /* Display list items horizontally */
     justify-content: space-around; /* Distribute items evenly */
-    padding: 20px 0; /* Add some padding top and bottom */
+    padding: 1vw 0; /* Use viewport units for padding top and bottom */
 }
 
 nav li {
-    margin: 0 15px; /* Add margin between list items */
+    margin: 0 1.2vw; /* Use viewport units for margin */
 }
 
 nav a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
+    font-size: 1.0vw; /* Use viewport units for font size */
 }
 
 /* Style the main content area */
 main {
     padding: 20px;
     display: flex; /* Enable flex layout */
-
+    align-items: center;
     text-align: center;
 }
 
 .description {
     flex: 1; /* Grow to take available space */
+    max-width: 80%; /* Adjust the max-width as needed */
+    margin: 0 auto; /* Center the description horizontally */
+    margin-left: 5%;
+    min-height: 600px;
+    font-size: 2vw; /* Use viewport units for font size */
 }
 
-.description p {
-    margin-bottom: 20px; /* Add margin below the paragraph */
-    padding: 10px;
+.description h1 {
+    font-size: 4vw; /* Increase the font size for larger screens */
+}
+
+.description h3 {
+    font-size: 2.0vw; /* Increase the font size for larger screens */
+    margin-bottom: 3vw; /* Use viewport units for margin */
 }
 
 .buttons {
     display: flex;
     flex-direction: column; /* Stack buttons vertically */
-
     align-items: center;
 }
 
 .button {
-    margin-bottom: 10px; /* Add space between buttons */
     background-color: #333;
     color: #fff;
-    padding: 10px 20px;
+    padding: 1vw 3vw; /* Use viewport units for padding */
     text-align: center;
     text-decoration: none;
     border: 1px solid #fff;
-    border-radius: 5px;
-    max-width: 10%;
-    min-width: 20%;
-    margin: 5%;
+    border-radius: 0.5vw; /* Use viewport units for border radius */
+    font-size: 1.5vw; /* Use viewport units for font size */
+    margin: 2vw; /* Use viewport units for margin */
 }
 
 /* Style the image */
 .image {
     flex: 1; /* Grow to take available space */
     text-align: right; /* Align the image to the right */
+    margin-right: 5vw;
+    margin-left: 1.2vw; /* Use viewport units for margin */
 }
 
 .image img {
