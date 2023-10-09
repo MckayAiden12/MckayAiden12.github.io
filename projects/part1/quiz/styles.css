@@ -1,0 +1,41 @@
+/* Reset some default styles for the list */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the navigation bar */
+header {
+    background-color: #333; /* Dark background color */
+    color: #fff; /* Text color */
+}
+
+nav ul {
+    display: flex; /* Display list items horizontally */
+    justify-content: space-around; /* Distribute items evenly */
+    padding: 20px 0; /* Add some padding top and bottom */
+}
+
+nav li {
+    margin: 0 15px; /* Add margin between list items */
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Style the main content area */
+main {
+    padding: 20px;
+}
+
+/* Style the footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
