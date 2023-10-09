@@ -1,0 +1,49 @@
+/* Apply basic styling to the flex container */
+.flex-container {
+    display: flex;
+    justify-content: space-between; /* Space items evenly */
+    align-items: center; /* Center items vertically */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 40px;
+}
+
+/* Style individual flex items */
+.flex-item {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #3399ff;
+    text-align: center;
+    min-height: 350px;
+    position: relative; /* Add relative positioning for the container */
+}
+
+/* Style the rainbow container */
+.rainbow-container {
+    display: flex;
+    flex-direction: column; /* Display rainbow colors top to bottom */
+    align-items: center; /* Center rainbow colors horizontally */
+    flex: 1; /* Expand to take more space */
+}
+
+/* Style the rainbow container */
+#rainbow {
+    display: flex;
+    flex-direction: column; /* Display colors top to bottom */
+}
+
+#rainbow p {
+    height: 30px; /* Adjust the height to make colors touch */
+    margin: 0; /* Remove margin between colors */
+    padding: 0; /* Remove padding between colors */
+    background-color: red; /* Initial color; will be updated by JavaScript */
+}
+
+/* Style the pot-of-gold */
+#pot-of-gold {
+    position: absolute; /* Add absolute positioning for the image */
+    top: 181px; /* Position at the top */
+    right: 20px; /* Position at the right */
+    display: none; /* Initially hidden */
+}
