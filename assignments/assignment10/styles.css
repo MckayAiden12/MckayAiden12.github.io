@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: aqua;
+}
+
+.container {
+    text-align: center;
+    margin: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#toys-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Add this property */
+    gap: 20px;
+}
+
+.toy {
+    flex-basis: calc(33.33% - 20px); /* Set the width of each toy to 33.33% with a 20px gap */
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+}
+
+.toy img {
+    max-width: 100%;
+    border: 1px solid #ddd;
+    transition: opacity 0.2s;
+    background-color: #ffffff;
+}
+
+.toy .description-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    text-align: center;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.toy .description-container span {
+    display: block;
+    margin: 10px 0;
+}
+
+.toy:hover .description-container {
+    display: block;
+}
+
+.toy img:hover {
+    opacity: 0.7;
+}
+
+.toy img {
+    max-width: 100%;
+    border: 1px solid #ddd;
+    transition: opacity 0.2s;
+}
+
+.toy img:hover {
+    opacity: 0.7;
+}
+
+#toy-details {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    text-align: center;
+    display: none;
+    z-index: 1; /* Make sure the details box appears above the toys */
+}
