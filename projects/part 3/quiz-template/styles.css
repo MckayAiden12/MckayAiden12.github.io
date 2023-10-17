@@ -61,3 +61,11 @@ nav .left {
     margin-right: auto; /* Push it to the left */
     margin-left: 25%
 }
+
+.result{
+    padding: 2vw;
+}
+
+.Menu{
+    padding: 1vw;
+}

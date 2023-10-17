@@ -33,8 +33,8 @@ document.getElementById('quizForm').addEventListener('submit', function (event) 
     const percentage = (score / totalQuestions) * 100;
 
     if (percentage >= 70) {
-        resultDiv.innerHTML = `You got ${score} out of ${totalQuestions}. Great job!`;
+        resultDiv.innerHTML = `You got ${score} out of ${totalQuestions} correct. Great job!`;
     } else {
-        resultDiv.innerHTML = `You got ${score} out of ${totalQuestions}. You need to study more.`;
+        resultDiv.innerHTML = `You got ${score} out of ${totalQuestions} correct. You need to study more.`;
     }
 });
