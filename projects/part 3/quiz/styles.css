@@ -40,7 +40,7 @@ nav a {
     text-decoration: none;
     color: rgb(122, 158, 242);
     font-weight: bold;
-    font-size: 1.0vw; /* Use viewport units for font size */
+    font-size: 1.25vw; /* Use viewport units for font size */
 }
 
 /* Style the left-aligned "Home" button */
