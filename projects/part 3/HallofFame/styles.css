@@ -38,7 +38,7 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color: #000000;
+    color: rgb(122, 158, 242);
     font-weight: bold;
     font-size: 1.0vw; /* Use viewport units for font size */
 }
