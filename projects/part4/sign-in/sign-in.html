@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>User Registration</h2>
+        <form action="../Home/Home.html" method="post">
+            <!-- User Registration Form (Your existing code) -->
+            <!-- ... -->
+        </form>
+
+        <div id="contact-form-section">
+            <h2>Contact Me</h2>
+            <form id="contact-form" onsubmit="sendEmail(event)">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Send Email</button>
+                </div>
+            </form>
+            <div id="email-message" class="hidden"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

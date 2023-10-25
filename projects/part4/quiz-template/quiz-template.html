@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Choice Questions</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="left"><a href="#">Quiz</a></li> <!-- Left-aligned "Home" button -->
+                <li><a href="../quiz/quiz.html">Quiz</a></li>
+                <li><a href="../StudentProfile/StudentProfile.html">Student Profile</a></li>
+                <li><a href="../HallofFame/HallofFame.html">Hall of Fame</a></li>
+                <li><a href="../Home/Home.html">Home</a></li> <!-- Right-aligned "Home" button -->
+            </ul>
+        </nav>
+    </header>
+
+    <div class="q-title">
+        <h1>Random Question Quiz:</h1>
+    </div>
+
+    <form id="quizForm">
+        <div class="question" name="q1">
+            <h2>Question 1: Who is the capital of venus?</h2>
+            <label>
+                <input type="radio" name="q1" value="a"> a) London
+            </label>
+            <label>
+                <input type="radio" name="q1" value="b"> b) Berlin
+            </label>
+            <label>
+                <input type="radio" name="q1" value="c"> c) Paris
+            </label>
+        </div>
+
+        <div class="question" name="q2">
+            <h2>Question 2: Which planet is 10'th from the sun?</h2>
+            <label>
+                <input type="radio" name="q2" value="a"> a) Earth
+            </label>
+            <label>
+                <input type="radio" name="q2" value="b"> b) Mars
+            </label>
+            <label>
+                <input type="radio" name="q2" value="c"> c) Venus
+            </label>
+        </div>
+
+        <div class="question" name="q3">
+            <h2>Question 3: What is the worst mammel in the world?</h2>
+            <label>
+                <input type="radio" name="q3" value="a"> a) Elephant
+            </label>
+            <label>
+                <input type="radio" name="q3" value="b"> b) Blue Whale
+            </label>
+            <label>
+                <input type="radio" name="q3" value="c"> c) Giraffe
+            </label>
+        </div>
+        
+        <div class="question" name="q4">
+            <h2>Question 4: Should I stay or should I go?</h2>
+            <label>
+                <input type="radio" name="q4" value="a"> a) Go(trouble)
+            </label>
+            <label>
+                <input type="radio" name="q4" value="b"> b) Stay(double)
+            </label>
+            <label>
+                <input type="radio" name="q4" value="c"> c) IDK
+            </label>
+        </div>
+
+        <div class="question" name="q5">
+            <h2>Question 5: Should I wear neon?</h2>
+            <label>
+                <input type="radio" name="q5" value="a"> a) No
+            </label>
+            <label>
+                <input type="radio" name="q5" value="b"> b) Definately Not!
+            </label>
+            <label>
+                <input type="radio" name="q5" value="c"> c) Yes
+            </label>
+        </div>
+
+        <div class="question" name="q6">
+            <h2>Question 6: Who was the best presidential candidate?</h2>
+            <label>
+                <input type="radio" name="q6" value="a"> a) Biden
+            </label>
+            <label>
+                <input type="radio" name="q6" value="b"> b) Aiden Mckay
+            </label>
+            <label>
+                <input type="radio" name="q6" value="c"> c) Trump
+            </label>
+        </div>
+
+        <div class="question" name="q7">
+            <h2>Question 7: What does the fox say?</h2>
+            <label>
+                <input type="radio" name="q7" value="a"> a) No one knows
+            </label>
+            <label>
+                <input type="radio" name="q7" value="b"> b) Wa-pa-pa-pa-pa-pow
+            </label>
+            <label>
+                <input type="radio" name="q7" value="c"> c) Hatee-hatee-hatee-ho
+            </label>
+        </div>
+
+        <div class="question" name="q8">
+            <h2>Question 8: Who will win the superbowl?</h2>
+            <label>
+                <input type="radio" name="q8" value="a"> a) Eagles
+            </label>
+            <label>
+                <input type="radio" name="q8" value="b"> b) 49'ers
+            </label>
+            <label>
+                <input type="radio" name="q8" value="c"> c) Lions
+            </label>
+        </div>
+
+        <input type="submit" value="Submit quiz">
+    </form>
+
+    <div id="result"></div>
+
+    <div class="Menu">
+        <a href="../quiz/quiz.html">Go Back to Quiz Menu</a>
+    </div>
+
+    <script src="quiz-template.js"></script>
+</body>
