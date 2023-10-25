@@ -1,80 +1,74 @@
-document.getElementById('quizForm').addEventListener('submit', function (event) {
+document.getElementById('addQuestion').addEventListener('click', function() {
+    const questionContainer = document.getElementById('question-container');
+    const questionCount = questionContainer.children.length;
+
+    const questionDiv = document.createElement('div');
+    questionDiv.classList.add('question');
+    questionDiv.name = `q${questionCount + 1}`;
+
+    const questionTitle = document.createElement('h2');
+    questionTitle.textContent = `Question ${questionCount + 1}:`;
+
+    const questionText = document.createElement('input');
+    questionText.type = 'text';
+    questionText.name = `questionText${questionCount + 1}`;
+    questionText.placeholder = 'Enter the question text';
+
+    const answerInputs = [];
+    const answerLabels = [];
+
+    for (let i = 0; i < 3; i++) {
+        const answerLabel = document.createElement('label');
+        const answerInput = document.createElement('input');
+        answerInput.type = 'radio';
+        answerInput.name = `q${questionCount + 1}`;
+        answerInput.value = String.fromCharCode(97 + i);
+        answerLabel.appendChild(answerInput);
+        answerLabel.appendChild(document.createTextNode(` ${String.fromCharCode(97 + i)}) `));
+        answerLabel.appendChild(document.createElement('input'));
+        answerInputs.push(answerInput);
+        answerLabels.push(answerLabel);
+    }
+
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Delete';
+    deleteButton.addEventListener('click', function() {
+        questionContainer.removeChild(questionDiv);
+    });
+
+    questionDiv.appendChild(questionTitle);
+    questionDiv.appendChild(questionText);
+
+    answerLabels.forEach((label) => {
+        questionDiv.appendChild(label);
+    });
+
+    questionDiv.appendChild(deleteButton);
+    questionContainer.appendChild(questionDiv);
+});
+
+document.getElementById('quizForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    const questions = []; // Store user-generated questions and answers
+    const quizName = document.querySelector('.q-title h1').textContent;
+    const questions = document.querySelectorAll('.question');
+    const answers = {};
 
-    // Collect user-generated questions and answers
-    const questionElements = document.querySelectorAll('.question');
-    questionElements.forEach((questionElement) => {
-        const questionText = questionElement.querySelector('h2').textContent;
-        const answers = Array.from(questionElement.querySelectorAll('input[type="text"]'))
-            .map((input) => input.value);
-
-        questions.push({ questionText, answers });
-    });
-
-    const totalQuestions = questions.length;
-    const userAnswers = [];
-
-    // Check user's answers
     questions.forEach((question, index) => {
-        const selectedAnswer = question.answers.find((answer, i) => {
-            return questionElement.querySelector(`input[name="q${index + 1}"][value="${i}"]:checked`);
-        });
-        userAnswers.push(selectedAnswer);
-    });
+        const questionText = question.querySelector(`input[name="questionText${index + 1}"]`).value;
+        const selectedOption = question.querySelector(`input[name="q${index + 1}"]:checked`);
 
-    let score = userAnswers.filter((answer, index) => {
-        return answer === questions[index].answers[0];
-    }).length;
+        if (questionText && selectedOption) {
+            answers[`q${index + 1}`] = selectedOption.value;
+        }
+    });
 
     const resultDiv = document.getElementById('result');
     const percentage = (score / totalQuestions) * 100;
 
     if (percentage >= 70) {
-        resultDiv.innerHTML = `You got ${score} out of ${totalQuestions} correct. Great job!`;
+        resultDiv.innerHTML = `You got ${score} out of ${totalQuestions} correct. Great job on the "${quizName}" quiz!`;
     } else {
-        resultDiv.innerHTML = `You got ${score} out of ${totalQuestions} correct. You need to study more.`;
+        resultDiv.innerHTML = `You got ${score} out of ${totalQuestions} correct on the "${quizName}" quiz. You need to study more.`;
     }
 });
-
-// Function to add a new question with inputs for question text and answers
-function addQuestion() {
-    const questionsContainer = document.getElementById('questions-container');
-    const questionDiv = document.createElement('div');
-    questionDiv.className = 'question';
-
-    const questionNumber = questionsContainer.childElementCount + 1;
-    questionDiv.innerHTML = `
-        <h2>Question ${questionNumber}:</h2>
-        <input type="text" name="q${questionNumber}" placeholder="Enter your question" required>
-        <br>
-        <label>
-            a) <input type="radio" name="q${questionNumber}" value="0" required>
-            <input type="text" name="q${questionNumber}" placeholder="Enter answer a" required>
-        </label>
-        <label>
-            b) <input type="radio" name="q${questionNumber}" value="1" required>
-            <input type="text" name="q${questionNumber}" placeholder="Enter answer b" required>
-        </label>
-        <label>
-            c) <input type="radio" name="q${questionNumber}" value="2" required>
-            <input type="text" name="q${questionNumber}" placeholder="Enter answer c" required>
-        </label>
-    `;
-
-    questionsContainer.appendChild(questionDiv);
-}
-
-// Function to remove the last added question
-function removeQuestion() {
-    const questionsContainer = document.getElementById('questions-container');
-    const lastQuestion = questionsContainer.lastElementChild;
-    if (lastQuestion) {
-        questionsContainer.removeChild(lastQuestion);
-    }
-}
-
-// Event listeners for adding and removing questions
-document.getElementById('add-question-button').addEventListener('click', addQuestion);
-document.getElementById('remove-question-button').addEventListener('click', removeQuestion);
