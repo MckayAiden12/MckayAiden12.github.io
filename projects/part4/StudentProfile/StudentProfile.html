@@ -33,11 +33,34 @@
             <img src="images/dude.jpg" alt="Image Description">
             <h4>Upload new picture:<input type="text" id="username" name="username" required></h4>
         </div>
-        
     </main>
-    
+    <div class="contact-form">
+        <h3>Contact Me</h3>
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="22daecea-57ea-4d65-a897-fae1a6745041">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea name="message" required></textarea>
+            </div>
+            <input type="hidden" name="redirect" value="https://web3forms.com/success">
+            <div class="form-group">
+                <button type="submit">Submit Form</button>
+            </div>
+        </form>
+        <div id="formMessage" class="form-message"></div>
+    </div>
     <footer>
         <!-- Your footer content goes here -->
     </footer>
+    <script src="contact-me.js"></script>
+    
 </body>
 </html>

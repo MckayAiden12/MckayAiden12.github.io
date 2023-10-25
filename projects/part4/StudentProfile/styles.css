@@ -98,7 +98,72 @@ main {
 
     height: auto; /* Maintain aspect ratio */
 }
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
+.contact-form h3 {
+    color: #333;
+    font-size: 24px;
+    margin-top: 0;
+}
+
+.form-group {
+    margin: 10px 0;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 5px; /* Reduce padding */
+    font-size: 14px; /* Reduce font size */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+#submitBtn {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 5px 10px; /* Reduce padding */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#submitBtn:hover {
+    background-color: #45a049;
+}
+
+.form-message {
+    margin-top: 10px;
+}
+
+.error-message {
+    color: #ff0000;
+}
+
+.success-message {
+    color: #008000;
+}
 /* Adjust font sizes for smaller screens */
 @media screen and (max-width: 768px) {
     main {
