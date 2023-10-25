@@ -105,8 +105,25 @@ main {
     margin-left: 1.2vw; /* Use viewport units for margin */
 }
 
-.image img {
-    max-width: 100%; /* Ensure the image doesn't exceed its container */
-    height: auto; /* Maintain aspect ratio */
+/* New CSS for the video container */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio (change as needed) */
+    height: 0;
+    overflow: hidden;
 }
 
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Set the video width to 100% of its container */
+    height: 100%; /* Set the video height to 100% of its container */
+}
+
+@media (max-width: 768px) {
+    .image {
+        text-align: center; /* Center-align for smaller screens */
+        margin-right: 0;
+    }
+}
