@@ -1,0 +1,76 @@
+{
+    "questions": [
+        {
+            "question": "Who is the capital of Venus?",
+            "options": [
+                "a) London",
+                "b) Berlin",
+                "c) Paris"
+            ],
+            "correctAnswer": "c"
+        },
+        {
+            "question": "Which planet is 10'th from the sun?",
+            "options": [
+                "a) Earth",
+                "b) Mars",
+                "c) Venus"
+            ],
+            "correctAnswer": "b"
+        },
+        {
+            "question": "What is the worst mammal in the world?",
+            "options": [
+                "a) Elephant",
+                "b) Blue Whale",
+                "c) Giraffe"
+            ],
+            "correctAnswer": "b"
+        },
+        {
+            "question": "Should I stay or should I go?",
+            "options": [
+                "a) Go(trouble)",
+                "b) Stay(double)",
+                "c) IDK"
+            ],
+            "correctAnswer": "a"
+        },
+        {
+            "question": "Should I wear neon?",
+            "options": [
+                "a) No",
+                "b) Definitely Not!",
+                "c) Yes"
+            ],
+            "correctAnswer": "c"
+        },
+        {
+            "question": "Who was the best presidential candidate?",
+            "options": [
+                "a) Biden",
+                "b) Aiden McKay",
+                "c) Trump"
+            ],
+            "correctAnswer": "b"
+        },
+        {
+            "question": "What does the fox say?",
+            "options": [
+                "a) No one knows",
+                "b) Wa-pa-pa-pa-pa-pow",
+                "c) Hatee-hatee-hatee-ho"
+            ],
+            "correctAnswer": "b"
+        },
+        {
+            "question": "Who will win the Super Bowl?",
+            "options": [
+                "a) Eagles",
+                "b) 49'ers",
+                "c) Lions"
+            ],
+            "correctAnswer": "c"
+        }
+    ]
+}

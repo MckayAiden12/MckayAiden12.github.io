@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.title {
+    font-size: 10vw;
+}
+
+.container {
+    width: 80%;
+    max-width: 650px;
+    min-width: 650px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin: 2vw 0;
+}
+
+label, input {
+    font-size: 3vw;
+}
+
+input[type="submit"] {
+    padding: .5vw 2vw;
+    font-size: 3vw;
+}
+
+#contact-form-section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+}
+
+#contact-form-section h2 {
+    margin-top: 0;
+}
+
+.hidden {
+    display: none;
+}

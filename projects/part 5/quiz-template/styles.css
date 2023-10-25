@@ -1,0 +1,72 @@
+body{
+    text-align: center;
+    background-color: #ebebeb;
+}
+h1{
+    color: rgb(122, 158, 242);
+    padding-top: 4vw;
+    font-size: 4vw;
+    padding-bottom: 2vw;
+}
+.question {
+    text-align: center;
+    margin: 1cqmin;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.question h2 {
+    font-size: 2vw;
+    margin-top: 3vw;
+}
+
+header {
+    background-color: #ffffff;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100; /* Ensure it's on top of other content */
+}
+
+main {
+    margin-top: 60px; /* Adjust the value based on your navbar's height */
+}
+
+nav ul {
+    display: flex; /* Display list items horizontally */
+    justify-content: space-between; /* Distribute items evenly */
+    padding: 1vw 0; /* Use viewport units for padding top and bottom */
+    margin-left: 1vw;
+}
+
+nav li {
+    margin: 0 3vw; /* Use viewport units for margin */
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(122, 158, 242);
+    font-weight: bold;
+    font-size: 1.25vw; /* Use viewport units for font size */
+}
+
+/* Style the left-aligned "Home" button */
+nav .left {
+    margin-right: auto; /* Push it to the left */
+    margin-left: 25%
+}
+
+.result{
+    padding: 2vw;
+}
+
+.Menu{
+    padding: 1vw;
+}
